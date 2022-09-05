@@ -1,17 +1,17 @@
 import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled, {css} from "styled-components";
 import { COLOR } from "../../constants/color";
 
 interface LinkProps {
     display?: string;
-    margin?: string;
-    padding?: string;
     width?: string | number;
     height?: string;
+    margin?: string;
+    padding?: string;
+    social?: boolean;
 }
 
-export const LinkCustom = styled(Link)<LinkProps>`
+export const Link = styled.a<LinkProps>`
     display: ${p => p.display || "block"};
     width: ${p => typeof p.width === "number" ? `${p.width}%` : `${p.width}px`};
     height: ${p => p.height}px;
@@ -26,4 +26,12 @@ export const LinkCustom = styled(Link)<LinkProps>`
     letter-spacing: 0.48px;
 
     color: ${COLOR.blackBrown};
+
+    ${prop => prop.social && css`
+        transition: all 0.3s linear;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+  `}
 `

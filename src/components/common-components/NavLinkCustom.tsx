@@ -5,10 +5,10 @@ import { COLOR } from "../../constants/color";
 
 interface NavLinkProps {
     display?: string;
-    margin?: string;
-    padding?: string;
     width?: string | number;
     height?: string;
+    margin?: string;
+    padding?: string;
 }
 
 export const NavLinkCustom = styled(NavLink)<NavLinkProps>`
@@ -24,6 +24,7 @@ export const NavLinkCustom = styled(NavLink)<NavLinkProps>`
     font-size: 15px;
     line-height: 16px;
     letter-spacing: 0.48px;
+    text-decoration: none;
 
     color: ${COLOR.blackBrown};
 `
