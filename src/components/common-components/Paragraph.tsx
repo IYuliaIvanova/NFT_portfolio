@@ -5,6 +5,9 @@ import { COLOR } from "../../constants/color";
 interface ParagraphProps {
     margin?: string;
     padding?: string;
+    fontSize?: string;
+    lineHeight?: string;
+    color?: string;
 }
 
 export const Paragraph = styled.p<ParagraphProps>`
@@ -13,9 +16,9 @@ export const Paragraph = styled.p<ParagraphProps>`
 
     font-style: normal;
     font-weight: 400;
-    font-size: 17px;
-    line-height: 26px;
+    font-size: ${p => p.fontSize || "17"}px;
+    line-height: ${p => p.lineHeight || "26"}px;
     letter-spacing: 0.48px;
     
-    color: ${COLOR.blackBasic};
+    color: ${p => p.color || COLOR.blackBasic};
 `

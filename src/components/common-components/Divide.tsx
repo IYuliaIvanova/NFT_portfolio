@@ -4,6 +4,7 @@ import styled from "styled-components";
 interface DivideProps {
     display?: string;
     width?: string | number;
+    maxWidth?: string;
     margin?: string;
     padding?: string;
     alignItems?: string;
@@ -20,6 +21,7 @@ interface DivideProps {
 export const Divide = styled.div<DivideProps>`
     display: ${p => p.display};
     width: ${p => typeof p.width === "number" ? `${p.width}%` : `${p.width}px`};
+    max-width: ${p => p.maxWidth}px;
 
     margin: ${p => p.margin};
     padding: ${p => p.padding};
