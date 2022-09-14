@@ -2,7 +2,7 @@ import React from "react";
 import styled, {css} from "styled-components";
 import { COLOR } from "../../constants/color";
 
-interface LinkProps {
+interface ILinkProps {
     display?: string;
     width?: string | number;
     height?: string;
@@ -11,7 +11,7 @@ interface LinkProps {
     social?: boolean;
 }
 
-export const Link = styled.a<LinkProps>`
+export const Link = styled.a<ILinkProps>`
     display: ${p => p.display || "block"};
     width: ${p => typeof p.width === "number" ? `${p.width}%` : `${p.width}px`};
     height: ${p => p.height}px;
@@ -19,6 +19,7 @@ export const Link = styled.a<LinkProps>`
     margin: ${p => p.margin};
     padding: ${p => p.padding};
 
+    text-decoration: none;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-interface ContainerProps {
+interface IContainerProps {
     display?: string;
     alignItems?: string;
     justifyContent?: string;
@@ -11,7 +11,7 @@ interface ContainerProps {
     borderBottom?: string;
 }
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div<IContainerProps>`
     display: ${p => p.display};
     width: 100%;
     max-width: 1170px;

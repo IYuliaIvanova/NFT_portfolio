@@ -2,7 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { COLOR } from "../../constants/color";
 
-interface ParagraphProps {
+interface IParagraphProps {
+    display?: string;
+    width?: string | number;
+    maxWidth?: string;
     margin?: string;
     padding?: string;
     fontSize?: string;
@@ -10,7 +13,11 @@ interface ParagraphProps {
     color?: string;
 }
 
-export const Paragraph = styled.p<ParagraphProps>`
+export const Paragraph = styled.p<IParagraphProps>`
+    display: ${p => p.display};
+    width: ${p => typeof p.width === "number" ? `${p.width}%` : `${p.width}px`};
+    max-width: ${p => p.maxWidth}px;
+
     margin: ${p => p.margin};
     padding: ${p => p.padding};
 

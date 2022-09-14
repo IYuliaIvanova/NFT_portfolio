@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "../../components/common-components/Container";
 import { Divide } from "../../components/common-components/Divide";
 import { Header } from "../../components/common-components/Header";
@@ -6,11 +6,32 @@ import { Link } from "../../components/common-components/Link";
 import { Image } from "../../components/common-components/Image"
 import { NavigationBar } from "../../components/common-components/NavigationBar";
 import { UnorderedList } from "../../components/common-components/UnorderedList";
-import { NavLinkCustom } from "../../components/common-components/NavLinkCustom";
 import { ListItem } from "../../components/common-components/ListItem";
 import { Button } from "../../components/common-components/Button";
 
 export const HeaderContainer = () => {
+    const [isActive, setIsActive] = useState(false);
+
+    const scrollToAnchor = () => {
+        const { hash } = window.location;
+        if (hash !== '') {
+          let retries = 0;
+          const id = hash.replace('#', '');
+          const scroll = () => {
+            retries += 0;
+            if (retries > 50) return;
+            const element = document.getElementById(id);
+            if (element) {
+              setTimeout(() => element.scrollIntoView({block: 'start', behavior: 'smooth'}), 1000);
+              setIsActive(true)
+            } else {
+              setTimeout(scroll, 100);
+              setIsActive(false)
+            }
+          };
+          scroll();
+        }
+      }
     return (
         <Header padding="14px 28px">
             <Container
@@ -25,19 +46,19 @@ export const HeaderContainer = () => {
                     alignItems="center" 
                     columnGap="46"
                 > 
-                    <NavLinkCustom to={"/"} display="block">
+                    <Link href="" display="block">
                         <Image src={require("../../assets/logo.svg").default} width={"94"}/>
-                    </NavLinkCustom>
+                    </Link>
                     <NavigationBar>
                         <UnorderedList display="flex" justifyContent="space-between" columnGap="48">
-                            <ListItem hoverNavBar>
-                                <NavLinkCustom to={"/"}>About us</NavLinkCustom>
+                            <ListItem onClick={scrollToAnchor} hoverNavBar>
+                                <Link href={"/#aboutUs"}>About us</Link>
                             </ListItem>
-                            <ListItem hoverNavBar>
-                                <NavLinkCustom to={"/"}>NFTs</NavLinkCustom>
+                            <ListItem onClick={scrollToAnchor} hoverNavBar>
+                                <Link href="/#nfts">NFTs</Link>
                             </ListItem>
-                            <ListItem hoverNavBar>
-                                <NavLinkCustom to={"/"}>Contact</NavLinkCustom>
+                            <ListItem onClick={scrollToAnchor} hoverNavBar>
+                                <Link href="/#contacts">Contact</Link>
                             </ListItem>
                         </UnorderedList>
                     </NavigationBar>

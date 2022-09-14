@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { COLOR } from "../../constants/color";
 
-interface ButtonProps {
+interface IButtonProps {
     width?: string;
     height?: string;
     margin?: string;
@@ -14,7 +14,7 @@ interface ButtonProps {
     borderRadius?: string;
 }
 
-export const Button = styled.button<ButtonProps>`
+export const Button = styled.button<IButtonProps>`
     width: ${p => p.width || "144"}px;
     height: ${p => p.height || "44"}px;
 

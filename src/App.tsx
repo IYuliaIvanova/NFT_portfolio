@@ -1,14 +1,9 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { HeaderContainer } from './containers/HeaderContainer/HeaderContainer';
-import { Layout } from './containers/Layout/Layout';
+import { MainPage } from './pages/MainPage/MainPage';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Layout/>}>
-      </Route>
-    </Routes>
+    <MainPage/>
   );
 }
 

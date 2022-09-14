@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { COLOR } from "../../constants/color";
 
-interface HeadingFirstLevelProps {
+interface IHeadingFirstLevelProps {
     margin?: string;
     padding?: string;
 }
 
-export const HeadingFirstLevel = styled.h1<HeadingFirstLevelProps>`
+export const HeadingFirstLevel = styled.h1<IHeadingFirstLevelProps>`
     margin: ${p => p.margin};
     padding: ${p => p.padding};
 

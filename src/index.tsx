@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { themes } from './constants/themes';
-import { BrowserRouter } from 'react-router-dom';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -20,8 +19,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <ThemeProvider theme={themes}>
     <GlobalStyle/>
-      <BrowserRouter>
-        <App/>
-      </BrowserRouter>
+    <App/>
   </ThemeProvider>
 );
