@@ -2,14 +2,14 @@ import React from "react";
 import { Section } from "../../components/common-components/Section";
 import { Container } from "../../components/common-components/Container";
 import { Divide } from "../../components/common-components/Divide";
-import { HeadingFirstLevel } from "../../components/common-components/HeadingFirsLevel";
+import { HeadingFirstLevel } from "../../components/common-components/HeadingFirstLevel";
 import { Paragraph } from "../../components/common-components/Paragraph";
 import { Image } from "../../components/common-components/Image"
 import { themes } from "../../constants/themes";
 
 export const Banner = () => {
     return (
-        <Section padding="63px 0 221px 0">
+        <Section padding="198px 0 221px 0">
             <Container
                 display="flex"
                 alignItems="center"

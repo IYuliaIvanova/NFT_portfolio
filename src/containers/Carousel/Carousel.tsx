@@ -25,10 +25,10 @@ export const Carousel = () => {
                 {stateSlides.map(({ id, img }, index) => {
                     return (
                         <Divide key={index} className="carousel-item" width={100} height="152" 
-                        transform={`translate(-${currentIndex * 100}%)`}
-                        transition=".5s all ease-in-out"
+                            transform={`translate(-${currentIndex * 100}%)`}
+                            transition=".5s all ease-in-out"
                         >
-                            <Image  width="152" src={require(`../../assets/slider/${img}.jpg`)}/>
+                            <Image width="152" src={require(`../../assets/slider/${img}.jpg`)}/>
                         </Divide>
                     )
                 })}

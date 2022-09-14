@@ -28,7 +28,7 @@ export const Link = styled.a<ILinkProps>`
 
     color: ${COLOR.blackBrown};
 
-    ${prop => prop.social && css`
+    ${p => p.social && css`
         transition: all 0.3s linear;
 
         &:hover {

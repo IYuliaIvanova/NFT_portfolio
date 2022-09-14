@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 interface IContainerProps {
     display?: string;
+    padding?: string;
     alignItems?: string;
     justifyContent?: string;
     rowGap?: string;
@@ -17,7 +18,7 @@ export const Container = styled.div<IContainerProps>`
     max-width: 1170px;
 
     margin: 0 auto;
-    padding: 0 16px;
+    padding: ${p => p.padding || "0 16px"};
 
     align-items: ${p => p.alignItems};
     justify-content: ${p => p.justifyContent};

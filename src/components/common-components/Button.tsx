@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { COLOR } from "../../constants/color";
 
 interface IButtonProps {
@@ -10,8 +10,12 @@ interface IButtonProps {
     fontWeight?: string;
     fontSize?: string;
     lineHeight?: string;
+    color?: string;
     background?: string;
+    border?: string;
     borderRadius?: string;
+    hoverAbout?: boolean;
+    activeAbout?: boolean;
 }
 
 export const Button = styled.button<IButtonProps>`
@@ -28,8 +32,9 @@ export const Button = styled.button<IButtonProps>`
     text-align: center;
     letter-spacing: 0.48px;
 
-    color: ${COLOR.white};
+    color: ${p => p.color || COLOR.white};
     background: ${ p => p.background || COLOR.blackBasic};
+    border: ${p => p.border};
     border-radius: ${p => `${p.borderRadius}px` || `0px`};
 
     transition: all 0.3s linear;
@@ -37,5 +42,14 @@ export const Button = styled.button<IButtonProps>`
 
     &:hover {
         transform: scale(1.1);
+        ${p => p.hoverAbout && css`
+            color: ${COLOR.white};
+            background: ${COLOR.blackBasic};
+        `}
     }
+
+    ${p => p.activeAbout && css`
+        color: ${COLOR.white};
+        background: ${COLOR.blackBasic};
+    `}
 `
