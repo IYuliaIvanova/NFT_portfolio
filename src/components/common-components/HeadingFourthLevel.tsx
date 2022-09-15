@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { COLOR } from "../../constants/color";
 
-interface IHeadingThirdLevelProps {
+interface IHeadingFourthLevelProps {
     display?: string;
     width?: string | number;
     maxWidth?: string;
@@ -11,7 +11,7 @@ interface IHeadingThirdLevelProps {
     textTransform?: string;
 }
 
-export const HeadingThirdLevel = styled.h3<IHeadingThirdLevelProps>`
+export const HeadingFourthLevel = styled.h4<IHeadingFourthLevelProps>`
     display: ${p => p.display};
     width: ${p => typeof p.width === "number" ? `${p.width}%` : `${p.width}px`};
     max-width: ${p => p.maxWidth}px;
@@ -21,8 +21,8 @@ export const HeadingThirdLevel = styled.h3<IHeadingThirdLevelProps>`
 
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 36px;
+    line-height: 36px;
     letter-spacing: 0.48px;
     text-transform: ${p => p.textTransform};
     

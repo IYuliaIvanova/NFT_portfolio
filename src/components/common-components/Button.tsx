@@ -3,6 +3,7 @@ import styled, {css} from "styled-components";
 import { COLOR } from "../../constants/color";
 
 interface IButtonProps {
+    display?: string;
     width?: string;
     height?: string;
     margin?: string;
@@ -19,6 +20,7 @@ interface IButtonProps {
 }
 
 export const Button = styled.button<IButtonProps>`
+    display: ${p => p.display};
     width: ${p => p.width || "144"}px;
     height: ${p => p.height || "44"}px;
 

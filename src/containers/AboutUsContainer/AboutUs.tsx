@@ -3,7 +3,7 @@ import { Button } from "../../components/common-components/Button";
 import { Container } from "../../components/common-components/Container";
 import { Divide } from "../../components/common-components/Divide";
 import { HeadingSecondLevel } from "../../components/common-components/HeadingSecondLevel";
-import { HeadingThirdLevel } from "../../components/common-components/HeadingThirdLevel";
+import { HeadingFourthLevel } from "../../components/common-components/HeadingFourthLevel";
 import { Image } from "../../components/common-components/Image";
 import { Paragraph } from "../../components/common-components/Paragraph";
 import { Section } from "../../components/common-components/Section";
@@ -91,7 +91,7 @@ export const AboutUs = () => {
                                     >
                                         {jobTitle}
                                     </Paragraph>
-                                    <HeadingThirdLevel display="inline-block" maxWidth="341" margin="0 0 16px 0">{title}</HeadingThirdLevel>
+                                    <HeadingFourthLevel display="inline-block" maxWidth="341" margin="0 0 16px 0">{title}</HeadingFourthLevel>
                                     <Paragraph display="inline-block" maxWidth="477" fontSize="20">{text}</Paragraph>
                                 </Divide>
                             </Divide> 
