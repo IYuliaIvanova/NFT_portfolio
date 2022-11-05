@@ -10,7 +10,7 @@ import { Button } from "../../components/common-components/Button";
 
 export const WorkContainer = () => {
     return (
-        <Section padding="0 0 84px 0">
+        <Section id="nfts" padding="0 0 84px 0">
             <Container display="flex" columnGap="63">
                 <Image src={require(`../../assets/work.png`)}/>
                 <Divide>

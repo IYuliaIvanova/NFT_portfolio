@@ -14,7 +14,7 @@ export const AboutUs = () => {
     const [indexActive, setIndexActive] = useState(0);
 
     return (
-        <Section id="aboutUs" padding="128px 0 96px 0">
+        <Section id="aboutUs" padding="128px 0 146px 0">
             <Container padding="0 48px">
                 <Divide margin="0 0 72px 0" textAlign="center">
                     <HeadingSecondLevel margin="0 0 25px 0">Hey there, we are</HeadingSecondLevel>

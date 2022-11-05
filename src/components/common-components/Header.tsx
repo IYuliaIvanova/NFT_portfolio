@@ -1,8 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { themes } from "../../constants/themes";
 
 interface IHeaderProps {
     padding?: string;
+    scrollHeader?: boolean;
 }
 
 export const Header = styled.header<IHeaderProps>`
@@ -13,4 +15,10 @@ export const Header = styled.header<IHeaderProps>`
     left: 0;
     top: 0;
     z-index: 10;
+
+    transition: 0.3s easy-in;
+
+    ${p => p.scrollHeader && css`
+        background: ${themes.colors.whiteSmoky};
+    `}
 `

@@ -8,6 +8,7 @@ interface IHeadingFourthLevelProps {
     maxWidth?: string;
     margin?: string;
     padding?: string;
+    fontWeight?: string;
     textTransform?: string;
 }
 
@@ -20,7 +21,7 @@ export const HeadingFourthLevel = styled.h4<IHeadingFourthLevelProps>`
     padding: ${p => p.padding};
 
     font-style: normal;
-    font-weight: 400;
+    font-weight: ${p => p.fontWeight || '400'};
     font-size: 36px;
     line-height: 36px;
     letter-spacing: 0.48px;
